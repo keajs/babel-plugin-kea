@@ -85,7 +85,7 @@ if your frontend lives under `frontend/src` and you don't want every kea path to
 // .babelrc
 {
   "plugins": [
-    ["babel-plugin-kea", { path: './frontend/src' }]
+    ["babel-plugin-kea", { "path": "./frontend/src" }]
   ]
 }
 ```
