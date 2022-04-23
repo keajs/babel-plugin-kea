@@ -10,7 +10,7 @@
     "lint": "eslint src/**",
     "prepublishOnly": "npm run test && npm run build",
     "start": "npm run watch",
-    "test": "echo \"No tests yet\""
+    "test": "jest"
   },
   "files": [
     "lib",
@@ -59,6 +59,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
+    "jest": "^27.5.1",
     "rollup": "^1.10.1",
     "rollup-plugin-babel": "^4.0.1",
     "rollup-plugin-node-resolve": "^4.2.3"
