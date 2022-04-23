@@ -17,8 +17,7 @@ const logic = kea([path([\\"scenes\\", \\"page\\", \\"index\\"]), actions({
 `;
 
 exports[`babel-plugin-kea works with kea 3.0 logic builders, no import 1`] = `
-"import { path } from \\"kea\\";
-const logic = kea([path([\\"scenes\\", \\"page\\", \\"index\\"]), actions({
+"const logic = kea([path([\\"scenes\\", \\"page\\", \\"index\\"]), actions({
   doit: true
 })]);"
 `;
