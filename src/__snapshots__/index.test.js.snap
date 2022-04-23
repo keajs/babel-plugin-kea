@@ -10,7 +10,15 @@ exports[`babel-plugin-kea works with kea 2.0 logic input 1`] = `
 `;
 
 exports[`babel-plugin-kea works with kea 3.0 logic builders 1`] = `
-"const logic = kea([path([\\"scenes\\", \\"page\\", \\"index\\"]), actions({
+"import { kea, path } from 'kea';
+const logic = kea([path([\\"scenes\\", \\"page\\", \\"index\\"]), actions({
+  doit: true
+})]);"
+`;
+
+exports[`babel-plugin-kea works with kea 3.0 logic builders, no import 1`] = `
+"import { path } from \\"kea\\";
+const logic = kea([path([\\"scenes\\", \\"page\\", \\"index\\"]), actions({
   doit: true
 })]);"
 `;

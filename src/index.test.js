@@ -24,6 +24,26 @@ describe('babel-plugin-kea', () => {
 
   test('works with kea 3.0 logic builders', () => {
     const oldCode = `
+      import { kea } from 'kea';
+      const logic = kea([
+        actions({ doit: true }),
+      ])
+    `
+
+    const { code } = transform(oldCode, {
+      envName: 'production',
+      code: true,
+      babelrc: false,
+      configFile: false,
+      filename: 'scenes/page/index.ts',
+      plugins: [keaPlugin],
+    })
+
+    expect(code).toMatchSnapshot()
+  })
+
+  test('works with kea 3.0 logic builders, no import', () => {
+    const oldCode = `
       const logic = kea([
         actions({ doit: true }),
       ])
